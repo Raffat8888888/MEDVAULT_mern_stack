@@ -1,0 +1,64 @@
+.mh-page {
+  background: linear-gradient(135deg, #d4f1f9, #f0faff);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.mh-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mh-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #007bff;
+}
+
+.mh-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mh-form label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.mh-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  resize: vertical;
+  margin-top: 6px;
+}
+
+.mh-submit {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mh-submit:hover {
+  background-color: #0056b3;
+}

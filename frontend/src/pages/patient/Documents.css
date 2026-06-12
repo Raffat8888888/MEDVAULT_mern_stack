@@ -1,0 +1,105 @@
+.documents-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+  font-weight: 600;
+}
+
+.document-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.document-form input[type="text"],
+.document-form select,
+.document-form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.btn-primary-modern {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary-modern:hover {
+  background-color: #0056b3;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #003366;
+  font-weight: 600;
+}
+
+.document-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.document-card {
+  background: #ffffff;
+  border-left: 6px solid #007bff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.1);
+}
+
+.doc-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.doc-details h4 {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+}
+
+.doc-details p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.view-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.view-link:hover {
+  text-decoration: underline;
+}

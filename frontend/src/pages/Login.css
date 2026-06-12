@@ -1,0 +1,120 @@
+:root {
+  --color-bg: #f6f9fc;
+  --color-light: #ffffff;
+  --color-border: #d0d5dd;
+  --color-primary: #0b6efd;
+  --color-dark: #1e2a3a;
+  --color-accent: #3b82f6;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e8f0fe, #f6f9fc);
+  padding: 2rem;
+}
+
+.login-card {
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.login-card:hover {
+  transform: translateY(-2px);
+}
+
+.app-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.login-subtitle {
+  color: #5e6e82;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(11, 110, 253, 0.2);
+}
+
+.btn-primary-modern {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary-modern:hover {
+  background-color: #0751cc;
+}
+
+.footer-links {
+  margin-top: 1.25rem;
+  font-size: 0.80rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  pad: 2rem;
+}
+
+.footer-links a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.register-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

@@ -1,0 +1,208 @@
+/* Patient Portal CSS */
+.patient-portal {
+  font-family: 'Segoe UI', sans-serif !important;
+  color: #333 !important;
+  background-color: #f7f9fc !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Header */
+.portal-header {
+  position: relative !important;
+  z-index: 10 !important;
+  background: #026aa7 !important;
+  color: white !important;
+  padding: 1rem 2rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.logo {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+}
+
+.dashboard-link {
+  background: white !important;
+  color: #026aa7 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 5px !important;
+  border: none !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+}
+
+/* Notification */
+.notification-wrapper {
+  position: relative !important;
+  display: inline-block !important;
+  margin-left: 15px !important;
+}
+
+.notification-bell {
+  font-size: 20px !important;
+  cursor: pointer !important;
+  background: none !important;
+  border: none !important;
+}
+
+.notification-dropdown {
+  background: #fff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  padding: 10px !important;
+  width: 250px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+  z-index: 9999 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 40px !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+.notification-item {
+  color: #333 !important;
+  font-size: 16px !important;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("patientportalbg.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 300px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.85) !important;
+  padding: 2rem !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+}
+
+.know-more {
+  margin-top: 1rem !important;
+  padding: 0.5rem 1rem !important;
+  background: #026aa7 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+}
+
+/* Info Section */
+.info-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 2rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  box-sizing: border-box !important;
+}
+
+.info-card {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  background: white !important;
+  border-left: 5px solid #026aa7 !important;
+  border-radius: 10px !important;
+  padding: 1.5rem 2rem !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05) !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important; /* keep button on right */
+  box-sizing: border-box !important;
+}
+
+.info-card.left,
+.info-card.right {
+  flex-direction: row !important;
+}
+
+.card-text {
+  max-width: 85% !important;
+  width: 85% !important;
+  white-space: normal !important; /* allow wrapping */
+  overflow: visible !important;   /* show full text */
+  text-overflow: clip !important; /* remove ... */
+  word-wrap: break-word !important; /* break long words */
+}
+
+.inside-button {
+  flex-shrink: 0 !important;
+  margin-left: 1rem !important;
+  background: #026aa7 !important;
+  color: white !important;
+  padding: 0.6rem 1rem !important;
+  border: none !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  align-self: flex-start !important;
+}
+
+/* Why We Collect Section */
+.why-we-collect {
+  background-color: #f9fdfc !important;
+  padding: 50px 20px !important;
+  margin-top: 40px !important;
+  border-top: 1px solid #ddd !important;
+  font-family: "Segoe UI", sans-serif !important;
+}
+
+.why-we-collect h2 {
+  font-size: 28px !important;
+  margin-bottom: 20px !important;
+  color: #2879d5 !important;
+}
+
+.why-we-collect ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.why-we-collect li {
+  margin: 10px 0 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+.why-we-collect strong {
+  color: #1b3da3 !important;
+}
+
+/* Footer */
+.portal-footer {
+  background: #026aa7 !important;
+  color: white !important;
+  padding: 1rem !important;
+  text-align: center !important;
+  margin-top: 3rem !important;
+}
+
+/* Responsive: stack button below text on small screens */
+@media (max-width: 768px) {
+  .info-card {
+    flex-direction: column !important;
+  }
+
+  .card-text {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .inside-button {
+    margin-left: 0 !important;
+    align-self: flex-start !important;
+  }
+}

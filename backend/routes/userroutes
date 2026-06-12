@@ -1,0 +1,86 @@
+// userroutes.js (CommonJS)
+const express = require("express");
+const User = require("../models/User.js");
+
+const router = express.Router();
+
+/**
+ * @route GET /api/user/:userId
+ * @desc Fetch full user data
+ */
+router.get("/:userId", async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const user = await User.findById(userId).lean();
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({
+      message: "Failed to fetch user",
+      error: err.message
+    });
+  }
+});
+
+/**
+ * @route DELETE /api/user/delete/:userId/:section
+ * @desc Delete an entire section from the user
+ */
+router.delete("/delete/:userId/:section", async (req, res) => {
+  const { userId, section } = req.params;
+
+  try {
+    if (!["demographics", "vitals", "medicalHistory"].includes(section)) {
+      return res.status(400).json({ message: "Invalid section" });
+    }
+
+    const result = await User.updateOne(
+      { _id: userId },
+      { $unset: { [section]: "" } }
+    );
+
+    if (result.modifiedCount === 0) {
+      return res.status(404).json({ message: "User or section not found" });
+    }
+
+    res.json({ message: `${section} deleted successfully` });
+  } catch (err) {
+    res.status(500).json({
+      message: "Failed to delete section",
+      error: err.message
+    });
+  }
+});
+
+/**
+ * @route DELETE /api/user/delete/:userId/documents/:index
+ * @desc Delete a document by index
+ */
+router.delete("/delete/:userId/documents/:index", async (req, res) => {
+  const { userId, index } = req.params;
+  const docIndex = parseInt(index, 10);
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    if (docIndex < 0 || docIndex >= user.documents.length) {
+      return res.status(400).json({ message: "Invalid document index" });
+    }
+
+    user.documents.splice(docIndex, 1);
+    await user.save();
+
+    res.json({ message: "Document deleted successfully" });
+  } catch (err) {
+    res.status(500).json({
+      message: "Failed to delete document",
+      error: err.message
+    });
+  }
+});
+
+module.exports = router;

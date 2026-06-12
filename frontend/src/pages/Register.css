@@ -1,0 +1,114 @@
+:root {
+  --color-bg: #f6f9fc;
+  --color-light: #ffffff;
+  --color-border: #d0d5dd;
+  --color-primary: #478df0;
+  --color-dark: #1e2a3a;
+  --color-highlight: #cde3ff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e8f0fe, #f6f9fc);
+  padding: 2rem;
+}
+
+.register-card {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.register-card:hover {
+  transform: translateY(-2px);
+}
+
+.app-name {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.register-title {
+  font-size: 1.6rem;
+  color: var(--color-dark);
+  margin-bottom: 0.25rem;
+}
+
+.register-subtitle {
+  color: #5e6e82;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(46, 126, 238, 0.2);
+}
+
+.btn-primary-modern {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary-modern:hover {
+  background-color: #407cdd;
+}
+.toggle-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  background: white;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #007bff;
+  color: white;
+}
+
